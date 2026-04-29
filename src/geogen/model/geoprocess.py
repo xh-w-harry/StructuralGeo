@@ -1662,7 +1662,7 @@ class Shear(Slip):
         # The sigmoid function will be centered around zero and will scale with amplitude
         return 1 / (1 + np.exp(-self.steepness * distances))  # Net peak to peak is 1
 
-    def run(self, xyz, array):
+    def run(self, xyz, data):
         # Apply the shear transformation
-        xyz_transformed, array = super().run(xyz, array)
-        return xyz_transformed, array
+        xyz_transformed, data = super().run(xyz, data)
+        return xyz_transformed, data
